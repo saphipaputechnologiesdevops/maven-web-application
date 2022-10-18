@@ -47,7 +47,7 @@ try{
   }
 } //Node closing
 
-*/
+/*
 //Code Snippet for sending slack notifications.
 
 def slackNotifications(String buildStatus = 'STARTED') {
