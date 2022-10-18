@@ -1,8 +1,9 @@
+@Library('sharedlibsmss') _
 node{
 
 try{
 
-  slackNotifications('STARTED')
+  sendSlackNotifications('STARTED')
  echo "The JobName is: ${env.JOB_NAME}"
  echo "The node name is: ${env.NODE_NAME}"
  echo "The build number is: ${env.BUILD_NUMBER}"
@@ -42,7 +43,7 @@ try{
   throw e
   }//catch closing
   finally{
-  slackNotifications(currentBuild.result)
+  sendSlackNotifications(currentBuild.result)
   }
 } //Node closing
 
